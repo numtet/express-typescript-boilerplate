@@ -4,6 +4,7 @@
     "NODE_ENV": "development"
   },
   "watch": ["src"],
+  "ext": "js, mjs, json, ts, css",
   "ignore": ["tests/**/*.ts"],
   "exec": "npx ts-node ./src/index.ts"
 }

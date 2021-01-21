@@ -1,9 +1,9 @@
-import express from "express";
+import express, { NextFunction } from "express";
 
 const app = express();
 const router = express.Router();
 
-app.use((req, res, next) => {
+app.use((req: express.Request, res: express.Response, next: NextFunction) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
     "Access-Control-Allow-Headers",
