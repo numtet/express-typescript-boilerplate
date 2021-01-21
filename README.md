@@ -61,6 +61,15 @@ cat <<EOF > nodemon.json
 EOF
 ```
 
+### Webpack
+```
+npm install --save-dev webpack webpack-cli webpack-merge webpack-node-externals ts-loader
+touch webpack/base.config.js
+touch webpack/dev.config.js
+touch webpack/prod.config.js
+```
+and filled three files above.
+
 ### JEST
 ```
 npm install --save-dev jest @types/jest ts-jest

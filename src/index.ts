@@ -1,16 +1,21 @@
-import express from "express";
-import * as bodyParser from "body-parser";
+import express, { NextFunction } from "express";
 
 const app = express();
 const router = express.Router();
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use((req: express.Request, res: express.Response, next: NextFunction) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
 
 router.get(
   "/",
   async (req: express.Request, res: express.Response): Promise<void> => {
-    res.send("hello world");
+    res.send("hello worldworld");
   }
 );
 
